@@ -6,12 +6,11 @@ travel_wishlist = [['Paris', 'France', 2000],['Tokyo', 'Japan', 3000],['New York
                    ['Los Angeles', 'USA', 2700],['Cape Town', 'South Africa', 2300],['Venice', 'Italy', 2000],
                    ['Istanbul', 'Turkey', 1750],['Toronto', 'Canada', 2250],['Rio de Janeiro', 'Brazil', 1950],
                    ['Athens', 'Greece', 1850]]
+                   
+# Create a new list of affordable cities
+affordable_cities = [city[0] for city in travel_wishlist if city[2] < 2500]
 
-# Extract trip costs using list comprehension
-trip_costs = []
 
-for cost in travel_wishlist:
-    trip_costs.append(cost[2])
 
 # Testing
-print('Trip Costs:', trip_costs)
+print('Affordable Cities:', affordable_cities)
